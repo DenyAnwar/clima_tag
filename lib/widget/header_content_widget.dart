@@ -5,14 +5,14 @@ import 'package:intl/intl.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
-class HeaderContent extends StatefulWidget {
-  const HeaderContent({Key? key}) : super(key: key);
+class HeaderContentWidget extends StatefulWidget {
+  const HeaderContentWidget({Key? key}) : super(key: key);
 
   @override
-  State<HeaderContent> createState() => _HeaderContentState();
+  State<HeaderContentWidget> createState() => _HeaderContentStateWidget();
 }
 
-class _HeaderContentState extends State<HeaderContent> {
+class _HeaderContentStateWidget extends State<HeaderContentWidget> {
   String city = "";
   String date = DateFormat("yMMMd").format(DateTime.now());
   final globalController = Get.put(GlobalController(), permanent: true);

@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:get/get.dart';
 import 'package:clima_tag/controller/global_controller.dart';
-import 'package:clima_tag/widget/header_content.dart';
+import 'package:clima_tag/widget/header_content_widget.dart';
+import 'package:clima_tag/widget/current_weather_widget.dart';
+import 'package:clima_tag/widget/hourly_weather_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -37,7 +39,12 @@ class _HomeScreenState extends State<HomeScreen> {
                   const SizedBox(
                     height: 20,
                   ),
-                  HeaderContent(),
+                  HeaderContentWidget(),
+                  CurrentWeatherWidget(),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  HourlyWeatherWidget(),
                 ],
               )));
   }

@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:clima_tag/models/weather_data.dart';
 import 'package:clima_tag/models/current_weather_data.dart';
+import 'package:clima_tag/models/hourly_weather_data.dart';
 import 'package:clima_tag/api/api_key.dart';
 import 'package:http/http.dart' as http;
 
@@ -11,7 +12,10 @@ class FetchData {
     var response = await http.get(Uri.parse(apiUrl(lat, lng)));
     var jsonString = jsonDecode(response.body);
 
-    weatherData = WeatherData(WeatherDataCurrent.fromJson(jsonString));
+    weatherData = WeatherData(
+      WeatherDataCurrent.fromJson(jsonString),
+      WeatherDataHourly.fromJson(jsonString),
+    );
     return weatherData!;
   }
 }
