@@ -31,7 +31,7 @@ class _HourlyWeatherWidgetState extends State<HourlyWeatherWidget> {
     // print('hourly length: ${weatherDataHourly.hourly.length}');
 
     return Container(
-      height: 150,
+      height: 200,
       padding: const EdgeInsets.only(top: 10, bottom: 10),
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
@@ -65,12 +65,13 @@ class _HourlyWeatherWidgetState extends State<HourlyWeatherWidget> {
                         : null,
                   ),
                   child: HourlyDetails(
-                    index: index,
-                    cardIndex: cardIndex.value,
-                    temp: weatherDataHourly.hourly[index].temp!,
-                    timeStamp: weatherDataHourly.hourly[index].dt!,
-                    icon: weatherDataHourly.hourly[index].weather![0].icon!,
-                  ),
+                      index: index,
+                      cardIndex: cardIndex.value,
+                      temp: weatherDataHourly.hourly[index].temp!,
+                      timeStamp: weatherDataHourly.hourly[index].dt!,
+                      icon: weatherDataHourly.hourly[index].weather![0].icon!,
+                      desc: weatherDataHourly
+                          .hourly[index].weather![0].description!),
                 ),
               ));
         },
@@ -101,6 +102,7 @@ class HourlyDetails extends StatelessWidget {
   final int temp;
   final int timeStamp;
   final String icon;
+  final String desc;
 
   const HourlyDetails({
     required this.index,
@@ -108,6 +110,7 @@ class HourlyDetails extends StatelessWidget {
     required this.temp,
     required this.timeStamp,
     required this.icon,
+    required this.desc,
   });
 
   String getTime(int dt) {
@@ -141,13 +144,24 @@ class HourlyDetails extends StatelessWidget {
         ),
         Container(
           margin: const EdgeInsets.only(bottom: 10),
+          child: Text('$desc',
+              textAlign: TextAlign.center,
+              style: index == cardIndex
+                  ? const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                      fontSize: 14.0)
+                  : null),
+        ),
+        Container(
+          margin: const EdgeInsets.only(bottom: 10),
           child: Text(
             '$temp°',
             style: index == cardIndex
                 ? const TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
-                    fontSize: 20.0)
+                  )
                 : const TextStyle(fontSize: 17.0),
           ),
         ),

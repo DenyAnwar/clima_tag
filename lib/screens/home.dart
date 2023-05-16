@@ -3,6 +3,7 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:get/get.dart';
 import 'package:clima_tag/controller/global_controller.dart';
 import 'package:clima_tag/widget/header_content_widget.dart';
+import 'package:clima_tag/widget/sun_info_widget.dart';
 import 'package:clima_tag/widget/current_weather_widget.dart';
 import 'package:clima_tag/widget/hourly_weather_widget.dart';
 
@@ -45,6 +46,10 @@ class _HomeScreenState extends State<HomeScreen> {
                     height: 20,
                   ),
                   HourlyWeatherWidget(),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  SunInfoWidget(),
                 ],
               )));
   }
