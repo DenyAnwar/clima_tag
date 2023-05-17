@@ -8,7 +8,7 @@ class WeatherDataCurrent {
 
 class Current {
   int? temp;
-  double? feels_like;
+  double? feelsLike;
   double? uvi;
   int? humidity;
   int? sunrise;
@@ -19,7 +19,7 @@ class Current {
 
   Current({
     this.temp,
-    this.feels_like,
+    this.feelsLike,
     this.uvi,
     this.humidity,
     this.sunrise,
@@ -31,7 +31,7 @@ class Current {
 
   factory Current.fromJson(Map<String, dynamic> json) => Current(
         temp: (json['temp'] as num?)?.round(),
-        feels_like: (json['feels_like'] as num?)?.toDouble(),
+        feelsLike: (json['feels_like'] as num?)?.toDouble(),
         uvi: (json['uvi'] as num?)?.toDouble(),
         humidity: (json['humidity'] as int?),
         sunrise: (json['sunrise'] as int?),

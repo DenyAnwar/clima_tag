@@ -21,7 +21,7 @@ class _CurrentWeatherWidgetState extends State<CurrentWeatherWidget> {
     super.initState();
   }
 
-  Widget CurrentWeatherDataWidget() {
+  Widget currentWeatherDataWidget() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
@@ -59,7 +59,7 @@ class _CurrentWeatherWidgetState extends State<CurrentWeatherWidget> {
     );
   }
 
-  Widget MoreDetailsOnCurrentWeatherData() {
+  Widget moreDetailsOnCurrentWeatherData() {
     return Column(
       children: [
         Row(
@@ -146,11 +146,11 @@ class _CurrentWeatherWidgetState extends State<CurrentWeatherWidget> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        CurrentWeatherDataWidget(),
+        currentWeatherDataWidget(),
         const SizedBox(
           height: 20,
         ),
-        MoreDetailsOnCurrentWeatherData(),
+        moreDetailsOnCurrentWeatherData(),
       ],
     );
   }

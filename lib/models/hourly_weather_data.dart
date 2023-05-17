@@ -1,5 +1,3 @@
-import 'package:clima_tag/models/weather_data.dart';
-
 class WeatherDataHourly {
   List<Hourly> hourly;
   WeatherDataHourly({required this.hourly});

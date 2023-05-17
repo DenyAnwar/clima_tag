@@ -4,8 +4,6 @@ import 'package:clima_tag/controller/global_controller.dart';
 import 'package:clima_tag/utilities/custom_colors.dart';
 import 'package:clima_tag/models/hourly_weather_data.dart';
 import 'package:intl/intl.dart';
-import 'package:http/http.dart' as http;
-import 'dart:convert';
 
 class HourlyWeatherWidget extends StatefulWidget {
   const HourlyWeatherWidget({Key? key}) : super(key: key);
@@ -87,7 +85,9 @@ class _HourlyWeatherWidgetState extends State<HourlyWeatherWidget> {
           alignment: Alignment.topCenter,
           child: const Text(
             'Today',
-            style: TextStyle(fontSize: 18),
+            style: TextStyle(
+              fontSize: 18,
+            ),
           ),
         ),
         hourlyList(),
