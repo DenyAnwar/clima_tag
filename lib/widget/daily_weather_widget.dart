@@ -67,7 +67,7 @@ class _DailyWeatherWidgetState extends State<DailyWeatherWidget> {
                       ),
                     ),
                     Text(
-                        '${weatherDataDaily.daily[index].temp!.min}° / ${weatherDataDaily.daily[index].temp!.max}°'),
+                        '${weatherDataDaily.daily[index].temp!.min}°C / ${weatherDataDaily.daily[index].temp!.max}°C'),
                   ],
                 ),
               ),

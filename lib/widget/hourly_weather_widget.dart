@@ -156,7 +156,7 @@ class HourlyDetails extends StatelessWidget {
         Container(
           margin: const EdgeInsets.only(bottom: 10),
           child: Text(
-            '$temp°',
+            '$temp°C',
             style: index == cardIndex
                 ? const TextStyle(
                     fontWeight: FontWeight.bold,

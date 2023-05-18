@@ -14,6 +14,7 @@ class Current {
   int? sunrise;
   int? sunset;
   int? clouds;
+  int? visibility;
   double? windSpeed;
   List<Weather>? weather;
 
@@ -25,6 +26,7 @@ class Current {
     this.sunrise,
     this.sunset,
     this.clouds,
+    this.visibility,
     this.windSpeed,
     this.weather,
   });
@@ -37,6 +39,7 @@ class Current {
         sunrise: (json['sunrise'] as int?),
         sunset: (json['sunset'] as int?),
         clouds: (json['clouds'] as int?),
+        visibility: (json['visibility'] as int?),
         windSpeed: (json['wind_speed'] as num?)?.toDouble(),
         weather: (json['weather'] as List<dynamic>?)
             ?.map((e) => Weather.fromJson(e as Map<String, dynamic>))

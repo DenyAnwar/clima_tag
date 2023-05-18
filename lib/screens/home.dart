@@ -7,6 +7,7 @@ import 'package:clima_tag/widget/sun_info_widget.dart';
 import 'package:clima_tag/widget/current_weather_widget.dart';
 import 'package:clima_tag/widget/hourly_weather_widget.dart';
 import 'package:clima_tag/widget/daily_weather_widget.dart';
+import 'package:clima_tag/widget/comfort_level_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -51,8 +52,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     height: 10,
                   ),
                   SunInfoWidget(),
-                  const Divider(),
                   DailyWeatherWidget(),
+                  const Divider(),
+                  ComfortLevelWidget(),
                 ],
               )));
   }

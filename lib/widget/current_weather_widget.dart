@@ -38,7 +38,7 @@ class _CurrentWeatherWidgetState extends State<CurrentWeatherWidget> {
         RichText(
           text: TextSpan(children: [
             TextSpan(
-              text: '${weatherDataCurrent.current.temp}°',
+              text: '${weatherDataCurrent.current.temp}°C',
               style: const TextStyle(
                 fontWeight: FontWeight.w600,
                 fontSize: 68,
@@ -46,7 +46,7 @@ class _CurrentWeatherWidgetState extends State<CurrentWeatherWidget> {
               ),
             ),
             TextSpan(
-              text: '${weatherDataCurrent.current.weather?[0].description}',
+              text: ' ${weatherDataCurrent.current.weather?[0].description}',
               style: const TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 17,
