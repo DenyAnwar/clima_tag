@@ -9,7 +9,7 @@ import 'package:http/http.dart' as http;
 class FetchData {
   WeatherData? weatherData;
 
-  Future<WeatherData> getData(lat, lng) async {
+  Future<WeatherData> getData(double lat, double lng) async {
     var response = await http.get(Uri.parse(apiUrl(lat, lng)));
     var jsonString = jsonDecode(response.body);
 

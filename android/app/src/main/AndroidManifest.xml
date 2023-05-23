@@ -2,9 +2,10 @@
     package="com.mythgreendev.clima_tag">
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
    <application
-        android:label="clima_tag"
+        android:label="clima tag"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
